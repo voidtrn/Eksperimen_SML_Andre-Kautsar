@@ -22,7 +22,7 @@ jobs:
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
     - name: Run Automated Preprocessing
       run: |
-        python preprocessing/automate_Andre-Kautsar.py --input student-performance_raw.csv
+        python preprocessing/automate_Andre-Kautsar.py --input student-performance_raw.csv --outdir preprocessing/student-performance_preprocessing
     - name: Commit & push processed data
       run: |
         git config user.name "voidtrn"
